@@ -13,6 +13,6 @@ end
 
 execute 'create-queues' do
   Chef::Log.info("creating queues...")
-  
+  action :nothing
 end
 
