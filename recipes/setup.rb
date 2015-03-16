@@ -5,7 +5,8 @@ execute 'create-user' do
   Chef::Log.info("creating user...")
   user = node['rabbitmq']['user']
   pass = node['rabbitmq']['pass']
-  cmd = 'rabbitmqctl add_user %s %s && rabbitmq set_user_tages %s administrator && rabbit rabbitmqctl set_permissions -p / %s ".*" ".*" ".*"' % [user,pass,user,user]
+  cmd = 'rabbitmqctl add_user %s %s && rabbitmqctl set_user_tags %s administrator && rabbitmqctl set_permissions -p / %s ".*" ".*" ".*"' % [user,pass,user,user]
+  Chef::Log.info(cmd)
   command cmd
   action :nothing
 end
