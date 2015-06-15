@@ -1,2 +1,2 @@
 # opsworks-rabbitmq
-Opsworks Cook for Installing RabbitMQ Cluster
+Opsworks Cookbook for Installing RabbitMQ Cluster
